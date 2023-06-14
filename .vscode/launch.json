@@ -2,7 +2,60 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/<target-framework>/<project-name.dll>",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "command": "npm start",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": ".NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/<target-framework>/<project-name.dll>",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            }
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/<target-framework>/<project-name.dll>",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceFolder}",
+                "pipeProgram": "enter the fully qualified path for the pipe program name, for example '/usr/bin/ssh'",
+                "pipeArgs": [],
+                "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
+            }
+        },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
@@ -14,8 +67,17 @@
                 "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
             }
         },
-        
-
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceFolder}",
+                "pipeProgram": "enter the fully qualified path for the pipe program name, for example '/usr/bin/ssh'",
+                "pipeArgs": [],
+                "debuggerPath": "enter the path for the debugger on the target machine, for example ~/vsdbg/vsdbg"
+            }
+        },
         {
             "name": "Sandbox Project",
             "type": "coreclr",
@@ -28,7 +90,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "C# Prep 1",
             "type": "coreclr",
@@ -41,7 +102,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "C# Prep 2",
             "type": "coreclr",
@@ -54,7 +114,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "C# Prep 3",
             "type": "coreclr",
@@ -67,7 +126,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "C# Prep 4",
             "type": "coreclr",
@@ -80,7 +138,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "C# Prep 5",
             "type": "coreclr",
@@ -93,7 +150,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Learning 02 (Resume)",
             "type": "coreclr",
@@ -106,7 +162,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Learning 03 (Fraction)",
             "type": "coreclr",
@@ -119,7 +174,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Learning 04 (Homework)",
             "type": "coreclr",
@@ -132,7 +186,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Learning 05 (Shapes)",
             "type": "coreclr",
@@ -145,7 +198,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Develop 02 (Journal)",
             "type": "coreclr",
@@ -158,7 +210,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Develop 03 (Scripture Memorizer)",
             "type": "coreclr",
@@ -171,7 +222,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Develop 04 (Mindfulness)",
             "type": "coreclr",
@@ -184,7 +234,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Develop 05 (Goal Tracker)",
             "type": "coreclr",
@@ -197,7 +246,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Final Project (Open ended)",
             "type": "coreclr",
@@ -210,7 +258,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Foundation 1 (YouTube)",
             "type": "coreclr",
@@ -223,7 +270,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Foundation 2 (Products)",
             "type": "coreclr",
@@ -236,7 +282,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Foundation 3 (Events)",
             "type": "coreclr",
@@ -249,7 +294,6 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
         {
             "name": "Foundation 4 (Exercise)",
             "type": "coreclr",
@@ -262,6 +306,55 @@
             "internalConsoleOptions": "neverOpen",
             "stopAtEntry": false
         },
-
+        {
+            "type": "pwa-msedge",
+            "name": "Launch Microsoft Edge",
+            "request": "launch",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "url": "c:\\Users\\admin\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.2\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Launch Microsoft Edge in headless mode",
+            "request": "launch",
+            "runtimeArgs": [
+                "--headless",
+                "--remote-debugging-port=9222"
+            ],
+            "url": "c:\\Users\\admin\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.2\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "name": "Open Edge DevTools",
+            "request": "attach",
+            "url": "c:\\Users\\admin\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.2\\out\\startpage\\index.html", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Edge Headless and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge in headless mode",
+                "Open Edge DevTools"
+            ]
+        },
+        {
+            "name": "Launch Edge and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge",
+                "Open Edge DevTools"
+            ]
+        }
     ]
 }
